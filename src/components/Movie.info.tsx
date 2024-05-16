@@ -1,6 +1,5 @@
 async function getMovieDetail(id: string) {
   console.log(`fetching movie data: ${Date.now()}`);
-  await new Promise((resolve) => setTimeout(resolve, 2000));
   const response = await fetch(process.env.API_URL + `/${id}`);
   return response.json();
 }
